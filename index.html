@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class="Bienvenida">
-        <span>Bienvenidos al juego del gato!</span>
+        <span class="saludo">Bienvenidos al juego del gato!</span>
+        <span class="jugar">A jugar!</span>
     </div>
     <div class=" pullUp">
         <div class="indicaciones ">
@@ -18,10 +19,30 @@
                 <header>Importante!</header>
                 <span class="uno">El jugador N°1 es: <span class="bigText">x</span></span>
                 <span class="dos">El jugador N°2 es: <span class="bigText">o</span></span>
-                <button class="play">Jugar</button>
+                <button id="iniciar" class="play">Jugar</button>
             </div>
         </div>
     </div>
+    <div class=" game hidden indicaciones pullUp">
+            <div class="gato">
+                    <input type="button" id="c1" class="btn casilla1" onclick="colocar(this)">
+                    <input type="button" id="c2" class="btn casilla2" onclick="colocar(this)">
+                    <input type="button" id="c3" class="btn casilla3" onclick="colocar(this)">
+                    <input type="button" id="c4" class="btn casilla4" onclick="colocar(this)">
+                    <input type="button" id="c5" class="btn casilla5" onclick="colocar(this)">
+                    <input type="button" id="c6" class="btn casilla6" onclick="colocar(this)">
+                    <input type="button" id="c7" class="btn casilla7" onclick="colocar(this)">
+                    <input type="button" id="c8" class="btn casilla8" onclick="colocar(this)">
+                    <input type="button" id="c9" class="btn casilla9" onclick="colocar(this)">
+            </div>
+        </div>
+        <div class="toast">
+            <div class="headWinner">
+                
+                <span class="mensaje"></span>
+            </div>
+        </div>
 </body>
 <script src="main.js"></script>
+
 </html>
