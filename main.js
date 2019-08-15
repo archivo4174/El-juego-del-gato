@@ -4,6 +4,7 @@ const game = document.querySelector(".game");
 const juega = document.querySelector(".jugar");
 const saludo = document.querySelector(".saludo");
 const mensaje = document.querySelector(".mensaje");
+const alertaGanadora = document.querySelector(".alet")
 
 var juego = false;
 var turno = 0;
@@ -52,7 +53,6 @@ function colocar(boton) {
     setTimeout(function () {
         evaluar();
     }, 300)
-
 }
 
 function evaluar() {
@@ -66,6 +66,10 @@ function evaluar() {
         || (tabla[2].value == "x" && tabla[4].value == "x" && tabla[6].value == "x")
     ) {
         mensaje.innerHTML = "El jugador numero 1 a ganado";
+        game.classList.add('hiddenHard');
+        alertaGanadora.classList.add('toast');
+
+        
 
     }
     if ((tabla[0].value == "o" && tabla[1].value == "o" && tabla[2].value == "o")
@@ -78,6 +82,8 @@ function evaluar() {
         || (tabla[2].value == "o" && tabla[4].value == "o" && tabla[6].value == "o")
     ) {
         mensaje.innerHTML = "El jugador numero 2 a ganado";
+        game.classList.add('hiddenHard');
+        alertaGanadora.classList.add('toast');
     }
 }
 
